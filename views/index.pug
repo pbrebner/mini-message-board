@@ -3,3 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  h2 Messages:
+  div.messages
+    each message in messages
+      div.message 
+        div 
+          strong Message: #{message.text}
+        div User: #{message.user} 
+        div Added:  #{message.added}
