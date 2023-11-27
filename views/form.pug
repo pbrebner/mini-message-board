@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1= title
+    p Welcome to #{title} 
+
+    a(href="/") Back to HomePage
+
+    h2 Message Form
+    form.messageForm(method="post", action="/new")
+        div.formElement
+            label(for="messageUser") Author:
+            input(type="text", name="messageUser", id="messageUser", required)
+        div.formElement
+            label(for="messageText") Message: 
+            textarea(id="messageText", name="messageText", cols="30", rows="10", required)
+        div.formElement
+            button.formBtn(type="submit") Submit Message
