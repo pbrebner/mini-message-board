@@ -3,12 +3,40 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-    color: #00b7ff;
+.navLink {
+    color: black;
 }
 
 .messages {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.message {
+    padding: 10px;
+    max-width: 400px;
+    border: 1px solid grey;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 10px;
+}
+
+.span2 {
+    grid-column: 1 / -1;
+}
+
+.messageForm {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formElement {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

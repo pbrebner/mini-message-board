@@ -4,13 +4,18 @@ block content
   h1= title
   p Welcome to #{title}
 
-  a(href="/new") Create New Messsage 
+  a(href="/new", class="navLink") Create New Messsage 
 
   h2 Messages:
   div.messages
     each message in messages
       div.message 
+        div(class="span2") 
+          strong Message: 
+          | #{message.text}
         div 
-          strong Message: #{message.text}
-        div User: #{message.user} 
-        div Added:  #{message.added}
+          strong User: 
+          | #{message.user} 
+        div 
+          strong Added: 
+          | #{message.added}
